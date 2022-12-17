@@ -14,10 +14,10 @@ namespace szamologep
             Console.WriteLine("Számológép (by: DM)");
             Console.WriteLine("...");
             bool kilepes;
-            char[] muveletek = new char[5] {'+','-','*','/','N'};
+            char[] muveletek = new char[6] {'+','-','*','/','N','H'};
             do
             {
-                Console.WriteLine("+ vagy - vagy * vagy / vagy N");
+                Console.WriteLine("+ vagy - vagy * vagy / vagy N vagy H");
                 Console.WriteLine("Művelet választása:");
                 char muvelet = Convert.ToChar(Console.ReadLine());
 
@@ -69,6 +69,9 @@ namespace szamologep
                                 {
                                     Console.WriteLine("Nem értelmezhető.");
                                 }
+                                break;
+                            case 'H':
+                                Console.WriteLine("A hatvány: {0}", Math.Pow(x,y));
                                 break;
                         }
                     }
