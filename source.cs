@@ -16,13 +16,33 @@ namespace szamologep
             bool kilepes;
             do
             {
-                Console.WriteLine("+  -  *  /");
+                Console.WriteLine("+ vagy - vagy * vagy / vagy N");
                 Console.WriteLine("Művelet választása:");
                 char muvelet = Convert.ToChar(Console.ReadLine());
 
-                if (muvelet != '+' && muvelet != '-' && muvelet != '*' && muvelet != '/')
+                if (muvelet != '+' && muvelet != '-' && muvelet != '*' && muvelet != '/' && muvelet != 'N')
                 {
                     Console.WriteLine("Ilyen műveletet nem tudok elvégezni");
+                }
+                
+                if (muvelet == 'N')
+                {
+                    Console.WriteLine("Gépelje be a számot:");
+                    double x = Convert.ToDouble(Console.ReadLine());
+
+                    switch (muvelet)
+                    {
+                        case 'N':
+                            if (x >= 0)
+                            {
+                                Console.WriteLine(Math.Sqrt(x));
+                            }
+                            else if (x < 0)
+                            {
+                                Console.WriteLine("Nem értelmezhető");
+                            }
+                            break;
+                    }
                 }
                 else
                 {
@@ -54,7 +74,7 @@ namespace szamologep
                             break;
                     }
                 }
-                
+
                 Console.WriteLine("Ki szeretnél lépni? (true/false)");
                 kilepes = Convert.ToBoolean(Console.ReadLine());
                 Console.WriteLine("...");
