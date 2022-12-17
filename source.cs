@@ -33,7 +33,7 @@ namespace szamologep
                             case 'N':
                                 if (x >= 0)
                                 {
-                                    Console.WriteLine(Math.Sqrt(x));
+                                    Console.WriteLine("Az eredmény: {0}", Math.Sqrt(x));
                                 }
                                 else if (x < 0)
                                 {
