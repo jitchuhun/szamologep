@@ -11,10 +11,14 @@ namespace szamologep
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             Console.WriteLine("Számológép (by: DM)");
             Console.WriteLine("...");
+
             bool kilepes;
-            char[] muveletek = new char[6] {'+','-','*','/','N','H'};
+            char[] muveletek = new char[6] { '+', '-', '*', '/', 'N', 'H' };
+
             do
             {
                 Console.WriteLine("+ vagy - vagy * vagy / vagy N vagy H");
@@ -37,7 +41,7 @@ namespace szamologep
                                 }
                                 else if (x < 0)
                                 {
-                                    Console.WriteLine("Nem értelmezhető");
+                                    Console.WriteLine("Nem értelmezhető.");
                                 }
                                 break;
                         }
@@ -71,16 +75,16 @@ namespace szamologep
                                 }
                                 break;
                             case 'H':
-                                Console.WriteLine("A hatvány: {0}", Math.Pow(x,y));
+                                Console.WriteLine("A hatvány: {0}", Math.Pow(x, y));
                                 break;
                         }
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Ilyen muveletet nem tudok elvegezni");
+                    Console.WriteLine("Ilyen műveletet nem tudok elvégezni.");
                 }
-                
+
                 Console.WriteLine("Ki szeretnél lépni? (true/false)");
                 kilepes = Convert.ToBoolean(Console.ReadLine());
                 Console.WriteLine("...");
